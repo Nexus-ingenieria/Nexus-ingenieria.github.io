@@ -1,308 +1,296 @@
 /* Reset y tipografía */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
-  }
-
-body {
-background-color: #f9f9f9;
-color: #333;
-line-height: 1.6;
 }
 
-/* Header */
+/* Fondo general futurista */
+body {
+  background-color: #0a0f1f; /* azul oscuro sci-fi */
+  color: #e6f1ff;
+  line-height: 1.6;
+}
+
+/* Header futurista */
 header {
-background-color: #0a3d62; /* color corporativo azul oscuro */
-color: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 50px;
-flex-wrap: wrap;
+  background-color: rgba(0, 20, 40, 0.9);
+  border-bottom: 2px solid #00aaff;
+  box-shadow: 0 0 20px #00aaff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  flex-wrap: wrap;
 }
 
 header .logo h1 {
-font-size: 28px;
-font-weight: bold;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00aaff;
 }
 
+/* NAV */
 nav ul {
-list-style: none;
-display: flex;
-gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul li a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-transition: 0.3s;
+  color: #e6f1ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
-color: #ff6600;
+  color: #00aaff;
+  text-shadow: 0 0 8px #00aaff;
 }
 
-/* Hero Section */
+/* HERO */
 .hero {
-    text-align: center;
-    color: black;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    background: none;
+  text-align: center;
+  color: white;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: radial-gradient(circle at center, #001428 0%, #000814 100%);
+  border-bottom: 2px solid #00aaff;
+  box-shadow: 0 0 25px #00aaff;
 }
 
 .hero-img {
-    width: calc(100% - 2cm);
-    max-width: 800px;
-    height: auto;
-    margin-bottom: 20px;
+  width: calc(100% - 2cm);
+  max-width: 800px;
+  border: 3px solid #00aaff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00aaff;
+  margin-bottom: 20px;
 }
 
 .hero h2 {
-font-size: 40px;
-margin-bottom: 20px;
-text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px #00aaff;
 }
 
 .hero p {
-font-size: 20px;
-margin-bottom: 30px;
-text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px #00aaff;
 }
 
 .hero .btn {
-background-color: #ff6600;
-color: white;
-padding: 12px 30px;
-text-decoration: none;
-border-radius: 5px;
-font-weight: bold;
-transition: 0.3s;
+  background-color: #00aaff;
+  color: #000d1a;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00aaff;
+  transition: 0.3s;
 }
 
 .hero .btn:hover {
-background-color: #e55b00;
+  background-color: #0088cc;
+  box-shadow: 0 0 25px #00aaff;
 }
 
-/* Sección de Servicios */
+/* SERVICIOS */
 #servicios {
-padding: 80px 20px;
-text-align: center;
-background-color: #f4f4f9;
+  padding: 80px 20px;
+  text-align: center;
+  background-color: rgba(0, 10, 30, 0.7);
+  border-top: 2px solid #00aaff;
 }
 
 #servicios h2 {
-font-size: 32px;
-color: #0a3d62;
-margin-bottom: 50px;
+  font-size: 32px;
+  color: #00aaff;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #00aaff;
 }
 
 .cards {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .card {
-background-color: white;
-padding: 30px;
-width: 250px;
-border-radius: 10px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-transition: 0.3s;
+  background-color: rgba(0, 20, 40, 0.9);
+  padding: 30px;
+  width: 250px;
+  border-radius: 10px;
+  border: 2px solid #00aaff;
+  box-shadow: 0 0 15px #00aaff;
+  transition: 0.3s;
+  color: white;
 }
 
 .card:hover {
-transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #00aaff;
 }
 
 .card h3 {
-margin-bottom: 15px;
-color: #ff6600;
+  margin-bottom: 15px;
+  color: #00ccff;
+  text-shadow: 0 0 8px #00aaff;
 }
 
-/* Proyectos */
-#proyectos h2 {
-font-size: 32px;
-color: #0a3d62;
-margin-bottom: 50px;
+/* EQUIPO (7 ingenieros con diseño futurista) */
+.equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.projects {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 30px;
+.ingeniero {
+  background: rgba(0, 20, 40, 0.9);
+  padding: 20px;
+  border: 2px solid #00aaff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px #00aaff;
+  transition: 0.3s;
 }
 
-.project-card {
-background-color: white;
-padding: 20px;
-width: 280px;
-border-radius: 10px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-transition: 0.3s;
+.ingeniero:hover {
+  box-shadow: 0 0 25px #00ccff;
 }
 
-.project-card:hover {
-transform: translateY(-5px);
+.ingeniero img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #00aaff;
+  box-shadow: 0 0 15px #00aaff;
+  margin-bottom: 15px;
 }
 
-.project-card h3 {
-color: #ff6600;
-margin-bottom: 10px;
+.ingeniero h4 {
+  color: #00ccff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00aaff;
 }
 
-/* Sobre Nosotros */
+.ingeniero p {
+  color: #cce7ff;
+  font-size: 14px;
+}
+
+/* SOBRE NOSOTROS */
 #sobre-nosotros {
-padding: 80px 20px;
-background-color: #f4f4f9;
-text-align: center;
+  padding: 80px 20px;
+  background-color: rgba(0, 10, 30, 0.7);
+  text-align: center;
+  border-top: 2px solid #00aaff;
 }
 
 #sobre-nosotros h2 {
-font-size: 32px;
-color: #0a3d62;
-margin-bottom: 30px;
+  font-size: 32px;
+  color: #00aaff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00aaff;
 }
 
 #sobre-nosotros p {
-max-width: 700px;
-margin: auto;
+  max-width: 700px;
+  margin: auto;
+  color: #cce7ff;
 }
 
-/* Contacto */
+/* CONTACTO */
 #contacto {
-padding: 80px 20px;
-text-align: center;
+  padding: 80px 20px;
+  text-align: center;
 }
 
 #contacto h2 {
-font-size: 32px;
-color: #0a3d62;
-margin-bottom: 20px;
-}
-
-#contacto form {
-display: flex;
-flex-direction: column;
-max-width: 500px;
-margin: auto;
-gap: 15px;
+  font-size: 32px;
+  color: #00aaff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00aaff;
 }
 
 #contacto input,
 #contacto textarea {
-padding: 12px;
-border-radius: 5px;
-border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid #00aaff;
+  background: #021020;
+  color: white;
+  box-shadow: 0 0 10px #00aaff;
 }
 
 #contacto button {
-padding: 12px;
-background-color: #ff6600;
-color: white;
-border: none;
-border-radius: 5px;
-font-weight: bold;
-cursor: pointer;
-transition: 0.3s;
+  padding: 12px;
+  background-color: #00aaff;
+  color: #001020;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00aaff;
+  transition: 0.3s;
 }
 
 #contacto button:hover {
-background-color: #e55b00;
+  background-color: #0088cc;
+  box-shadow: 0 0 30px #00aaff;
 }
 
 .info-contacto {
-margin-top: 20px;
-color: #555;
+  margin-top: 20px;
+  color: #cce7ff;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-background-color: #0a3d62;
-color: white;
-text-align: center;
-padding: 30px 20px;
+  background-color: rgba(0, 20, 40, 0.9);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 2px solid #00aaff;
+  box-shadow: 0 0 20px #00aaff;
 }
 
 footer .redes a {
-color: white;
-text-decoration: none;
-margin: 0 10px;
-font-weight: bold;
+  color: #00ccff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
 footer .redes a:hover {
-color: #ff6600;
+  color: #0099cc;
+  text-shadow: 0 0 8px #00aaff;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-header {
-flex-direction: column;
-gap: 10px;
+  header {
+      flex-direction: column;
+      gap: 10px;
+  }
+  .cards, .projects {
+      flex-direction: column;
+      gap: 20px;
+  }
+  .hero {
+      padding: 100px 20px;
+  }
 }
-.cards, .projects {
-flex-direction: column;
-gap: 20px;
-}
-.hero {
-padding: 100px 20px;
-}
-}
-
-/* ========================================================= */
-/*      ESTILOS NUEVOS SOLO PARA LA SECCIÓN DE INGENIEROS    */
-/* ========================================================= */
-
-/* Ajuste para que 7 ingenieros quepan en varias columnas */
-.equipo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-.ingeniero {
-    background: white;
-    padding: 20px;
-    width: 260px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.ingeniero:hover {
-    transform: translateY(-6px);
-}
-
-.ingeniero img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid #0a3d62;
-}
-
-.ingeniero h4 {
-    color: #0a3d62;
-    margin-bottom: 8px;
-}
-
-.ingeniero p {
-    color: #555;
-}
-
