@@ -265,14 +265,15 @@ padding: 100px 20px;
 /*      ESTILOS NUEVOS SOLO PARA LA SECCIÓN DE INGENIEROS    */
 /* ========================================================= */
 
+/* Ajuste para que 7 ingenieros quepan en varias columnas */
 .equipo {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
-
 .ingeniero {
     background: white;
     padding: 20px;
