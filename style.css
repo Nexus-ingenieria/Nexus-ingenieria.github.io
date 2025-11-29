@@ -1,110 +1,307 @@
-<!DOCTYPE html>
+/* Reset y tipografía */
 
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS Ingeniería</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1>NEXUS Ingeniería</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  }
 
+body {
+background-color: #f9f9f9;
+color: #333;
+line-height: 1.6;
+}
 
-<!-- Hero / Sección principal -->
-<section id="inicio" class="hero">
-    <img src="FullLogo_NoBuffer.jpg" alt="NEXUS Ingeniería" class="hero-img">
-    <h2>Innovación y Tecnología para tu Empresa</h2>
-    <p>En NEXUS Ingeniería Colectivo de profesionales especializados que unifica las diversas ramas de la ingeniería para diseñar y construir soluciones de alto impacto..</p>
-    <a href="+504 8976-6542" class="btn">Contáctanos</a>
-</section>
+/* Header */
+header {
+background-color: #0a3d62; /* color corporativo azul oscuro */
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 50px;
+flex-wrap: wrap;
+}
 
-<!-- Servicios -->
-<section id="servicios">
-    <h2>Servicios Destacados</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Paginas Web</h3>
-            <p>Diseño estructural, de Paginas web dedicadas a ventas y publicidad.</p>
-        </div>
-        <div class="card">
-            <h3>Aplicaciones Moviles </h3>
-            <p>Aplicaciones de gestión de datos empresariales y todo tipo de aplicaciones moviles que necesites .</p>
-        </div>
-        <div class="card">
-            <h3> Planos técnicos especializados </h3> 
-            <p>Sistemas civiles, Mecánicos industriales, Sistemas de aire y climatización, planos de corte por laser.</p>
-        </div>
-        <div class="card">
-            <h3>Desarrollo Tecnológico</h3>
-            <p>Sistemas inteligentes, automatización y soluciones IoT para empresas.</p>
-        </div>
-    </div>
-</section>
+header .logo h1 {
+font-size: 28px;
+font-weight: bold;
+}
 
-<!-- Sobre Nosotros -->
-<section id="sobre-nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>NEXUS Ingeniería es una empresa dedicada a ofrecer soluciones integrales de ingeniería, combinando innovación tecnológica y compromiso con la calidad. Nuestra misión es impulsar proyectos que transformen el entorno y generen valor para nuestros clientes.</p>
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
 
-    <!-- EQUIPO DE INGENIEROS DENTRO DE SObRE NOSOTROS -->
-    <h3 style="margin-top:40px;">Nuestro Equipo de Ingenieros</h3>
+nav ul li a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+transition: 0.3s;
+}
 
-    <div class="equipo">
-        <div class="ingeniero">
-            <img src="images/ingeniero1.jpg" alt="Ingeniero 1">
-            <h4>Ing. Nombre Apellido</h4>
-            <p>Especialista en infraestructura, redes y soluciones empresariales.</p>
-        </div>
+nav ul li a:hover {
+color: #ff6600;
+}
 
-        <div class="ingeniero">
-            <img src="images/ingeniero2.jpg" alt="Ingeniero 2">
-            <h4>Ing. Nombre Apellido</h4>
-            <p>Experto en desarrollo de software, apps móviles y automatización.</p>
-        </div>
+/* Hero Section */
+.hero {
+    text-align: center;
+    color: black;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: none;
+}
 
-        <div class="ingeniero">
-            <img src="images/ingeniero3.jpg" alt="Ingeniero 3">
-            <h4>Ing. Nombre Apellido</h4>
-            <p>Profesional en ciberseguridad, análisis de riesgos y auditorías técnicas.</p>
-        </div>
-    </div>
-</section>
+.hero-img {
+    width: calc(100% - 2cm);
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+}
 
-<!-- Contacto -->
-<section id="contacto">
-    <h2>Contacto</h2>
+.hero h2 {
+font-size: 40px;
+margin-bottom: 20px;
+text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
 
-    <div class="info-contacto">
-        <p>Email: contacto@nexusingenieria.com</p>
-        <p>Teléfono: +504 8976-6542</p>
-        <p>Dirección: Honduras</p>
-    </div>
-</section>
+.hero p {
+font-size: 20px;
+margin-bottom: 30px;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
 
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 NEXUS Ingeniería. Todos los derechos reservados.</p>
-    <div class="redes">
-        <a href="#">Facebook</a> | 
-        <a href="#">LinkedIn</a> | 
-        <a href="#">Instagram</a>
-    </div>
-</footer>
+.hero .btn {
+background-color: #ff6600;
+color: white;
+padding: 12px 30px;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+transition: 0.3s;
+}
 
-</body>
-</html>
+.hero .btn:hover {
+background-color: #e55b00;
+}
+
+/* Sección de Servicios */
+#servicios {
+padding: 80px 20px;
+text-align: center;
+background-color: #f4f4f9;
+}
+
+#servicios h2 {
+font-size: 32px;
+color: #0a3d62;
+margin-bottom: 50px;
+}
+
+.cards {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px;
+}
+
+.card {
+background-color: white;
+padding: 30px;
+width: 250px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+}
+
+.card h3 {
+margin-bottom: 15px;
+color: #ff6600;
+}
+
+/* Proyectos */
+#proyectos h2 {
+font-size: 32px;
+color: #0a3d62;
+margin-bottom: 50px;
+}
+
+.projects {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px;
+}
+
+.project-card {
+background-color: white;
+padding: 20px;
+width: 280px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+transition: 0.3s;
+}
+
+.project-card:hover {
+transform: translateY(-5px);
+}
+
+.project-card h3 {
+color: #ff6600;
+margin-bottom: 10px;
+}
+
+/* Sobre Nosotros */
+#sobre-nosotros {
+padding: 80px 20px;
+background-color: #f4f4f9;
+text-align: center;
+}
+
+#sobre-nosotros h2 {
+font-size: 32px;
+color: #0a3d62;
+margin-bottom: 30px;
+}
+
+#sobre-nosotros p {
+max-width: 700px;
+margin: auto;
+}
+
+/* Contacto */
+#contacto {
+padding: 80px 20px;
+text-align: center;
+}
+
+#contacto h2 {
+font-size: 32px;
+color: #0a3d62;
+margin-bottom: 20px;
+}
+
+#contacto form {
+display: flex;
+flex-direction: column;
+max-width: 500px;
+margin: auto;
+gap: 15px;
+}
+
+#contacto input,
+#contacto textarea {
+padding: 12px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+#contacto button {
+padding: 12px;
+background-color: #ff6600;
+color: white;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
+}
+
+#contacto button:hover {
+background-color: #e55b00;
+}
+
+.info-contacto {
+margin-top: 20px;
+color: #555;
+}
+
+/* Footer */
+footer {
+background-color: #0a3d62;
+color: white;
+text-align: center;
+padding: 30px 20px;
+}
+
+footer .redes a {
+color: white;
+text-decoration: none;
+margin: 0 10px;
+font-weight: bold;
+}
+
+footer .redes a:hover {
+color: #ff6600;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+header {
+flex-direction: column;
+gap: 10px;
+}
+.cards, .projects {
+flex-direction: column;
+gap: 20px;
+}
+.hero {
+padding: 100px 20px;
+}
+}
+
+/* ========================================================= */
+/*      ESTILOS NUEVOS SOLO PARA LA SECCIÓN DE INGENIEROS    */
+/* ========================================================= */
+
+.equipo {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.ingeniero {
+    background: white;
+    padding: 20px;
+    width: 260px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.ingeniero:hover {
+    transform: translateY(-6px);
+}
+
+.ingeniero img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #0a3d62;
+}
+
+.ingeniero h4 {
+    color: #0a3d62;
+    margin-bottom: 8px;
+}
+
+.ingeniero p {
+    color: #555;
+}
+
