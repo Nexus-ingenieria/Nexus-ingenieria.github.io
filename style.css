@@ -159,6 +159,16 @@ color: #3fffcf;
 margin-bottom: 15px;
 }
 
+/* Fotos del equipo de ingenieros (ajustadas para todos) */
+.equipo .ingeniero img {
+width: 200px;        /* ancho reducido para que entren todas */
+height: 200px;       /* alto reducido */
+object-fit: cover;   /* recorta sin deformar */
+border-radius: 10px; /* bordes redondeados */
+display: block;
+margin: 0 auto 15px; /* centra y separa del nombre */
+}
+
 /* Contacto */
 #contacto {
 text-align: center;
@@ -189,12 +199,3 @@ background-color: #32e6b0;
 box-shadow: 0 0 10px #3fffcf;
 }
 
-/* --- Corrección de las fotos de los ingenieros --- */
-.equipo .ingeniero img {
-width: 220px;        /* ancho uniforme */
-height: 220px;       /* alto uniforme */
-object-fit: cover;   /* recorta sin deformar */
-border-radius: 10px; /* bordes redondeados */
-display: block;
-margin: 0 auto 15px; /* centra y separa del nombre */
-}
