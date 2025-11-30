@@ -1,233 +1,79 @@
-/* Reset y tipografía */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-body {
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+/* --- LOGO EN LA ESQUINA --- */
+.logo img {
+    width: 120px;
+    height: auto;
+    mix-blend-mode: multiply; /* Quita fondo blanco automáticamente */
+    object-fit: contain;
 }
 
 /* Header */
 header {
-  background-color: #0a3d62; /* color corporativo azul oscuro */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  flex-wrap: wrap;
-}
-
-/* LOGO pequeño */
-header .logo img {
-  width: 120px;
-  height: auto;
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ff6600;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    color: black;
-    min-height: 500px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 16px;
-    background: none;
+    padding: 20px;
+    background: #0a0a0a;
+    border-bottom: 2px solid #008cff;
 }
 
-/* OCULTAR IMAGEN GRANDE */
-.hero-img {
-    display: none;
+/* Hero sin imagen */
+.hero {
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
 }
 
+/* Texto del hero */
 .hero h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
-.hero .btn {
-  background-color: #ff6600;
-  color: white;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.3s;
+/* Botón */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #008cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #0066cc;
 }
 
-.hero .btn:hover {
-  background-color: #e55b00;
-}
-
-/* Servicios */
-#servicios {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f4f4f9;
-}
-
-#servicios h2 {
-  font-size: 32px;
-  color: #0a3d62;
-  margin-bottom: 50px;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.card {
-  background-color: white;
-  padding: 30px;
-  width: 250px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  margin-bottom: 15px;
-  color: #ff6600;
-}
-
-/* Sección de Ingenieros */
+/* --- ESTILOS DEL EQUIPO --- */
 .equipo {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
 }
 
 .ingeniero {
-  background: white;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: center;
+    background: #111;
+    padding: 20px;
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 12px #00aaff;
 }
 
 .ingeniero img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .ingeniero h4 {
-  color: #0a3d62;
-  margin-bottom: 10px;
-}
-
-.ingeniero p {
-  color: #555;
-  font-size: 14px;
-}
-
-/* Sobre Nosotros */
-#sobre-nosotros {
-  padding: 80px 20px;
-  background-color: #f4f4f9;
-  text-align: center;
-}
-
-#sobre-nosotros h2 {
-  font-size: 32px;
-  color: #0a3d62;
-  margin-bottom: 30px;
-}
-
-#sobre-nosotros p {
-  max-width: 700px;
-  margin: auto;
-}
-
-/* Contacto */
-#contacto {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#contacto h2 {
-  font-size: 32px;
-  color: #0a3d62;
-  margin-bottom: 20px;
-}
-
-.info-contacto {
-  margin-top: 20px;
-  color: #555;
-}
-
-/* Footer */
-footer {
-  background-color: #0a3d62;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-footer .redes a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-
-footer .redes a:hover {
-  color: #ff6600;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .cards, .projects {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .hero {
-    padding: 100px 20px;
-  }
+    margin-top: 12px;
+    color: #00aaff;
 }
