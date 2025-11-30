@@ -159,6 +159,16 @@ color: #3fffcf;
 margin-bottom: 15px;
 }
 
+/* Fotos del equipo de ingenieros */
+.equipo .ingeniero img {
+width: 200px;        /* ancho uniforme */
+height: 200px;       /* alto uniforme */
+object-fit: cover;   /* recorta sin deformar */
+border-radius: 10px; /* opcional: bordes redondeados */
+display: block;
+margin: 0 auto 15px; /* centra la imagen y separa del nombre */
+}
+
 /* Contacto */
 #contacto {
 text-align: center;
