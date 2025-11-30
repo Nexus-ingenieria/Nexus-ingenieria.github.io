@@ -24,11 +24,13 @@ header {
 }
 
 /* Logo pequeño sin fondo */
+/* Logo pequeño sin fondo (actualizado) */
 header .logo img {
-  width: 120px;
+  width: 160px;        /* antes era 120px → ahora un poco más grande */
   height: auto;
   display: block;
-  background: transparent;
+  background: transparent !important;  /* garantiza que NO tenga fondo */
+  border-radius: 0;   /* evita cualquier borde extraño */
 }
 
 /* NAV */
