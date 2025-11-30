@@ -1,4 +1,4 @@
-/* CSS completo actualizado y corregido */
+/* CSS completo actualizado con logo más grande */
 
 /* Reset básico */
 
@@ -11,15 +11,15 @@
 
 /* Body */
 body {
-background-color: #f9f9f9; /* color de fondo general */
+background-color: #f9f9f9;
 color: #333;
 }
 
 /* Cabecera / Header */
 header {
 width: 100%;
-height: 70px; /* un poco más alto si quieres más espacio para el logo */
-background-color: #fff; /* fondo de la barra superior */
+height: 80px; /* altura ajustada para logo más grande */
+background-color: #fff;
 display: flex;
 align-items: center;
 padding: 0 20px;
@@ -27,15 +27,15 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 position: relative;
 }
 
-/* Logo sin fondo */
+/* Logo sin fondo y más grande */
 .logo {
-width: 180px;       /* más grande que antes */
-height: auto;       /* mantiene proporción */
-background: transparent !important;   /* garantiza que NO tenga fondo */
+width: 220px;       /* ahora más grande */
+height: auto;
+background: transparent !important;   /* asegura que NO tenga fondo */
 position: absolute; /* esquina superior izquierda */
 top: 5px;
 left: 10px;
-z-index: 1000;      /* sobre otros elementos */
+z-index: 1000;
 cursor: pointer;
 transition: transform 0.2s ease-in-out;
 }
@@ -46,7 +46,7 @@ transform: scale(1.05);
 
 /* Navegación */
 nav {
-margin-left: auto; /* empuja el nav a la derecha */
+margin-left: auto;
 }
 
 nav ul {
@@ -66,7 +66,7 @@ transition: color 0.2s;
 }
 
 nav ul li a:hover {
-color: #ff6600; /* efecto hover */
+color: #ff6600;
 }
 
 /* Secciones principales */
