@@ -1,4 +1,4 @@
-/* CSS completo actualizado con logo más grande */
+/* CSS completo actualizado con logo grande real */
 
 /* Reset básico */
 
@@ -18,7 +18,7 @@ color: #333;
 /* Cabecera / Header */
 header {
 width: 100%;
-height: 80px; /* altura ajustada para logo más grande */
+height: 100px; /* mayor altura para el logo grande */
 background-color: #fff;
 display: flex;
 align-items: center;
@@ -27,20 +27,20 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 position: relative;
 }
 
-/* Logo sin fondo y más grande */
-.logo {
-width: 220px;       /* ahora más grande */
+/* Logo sin fondo y mucho más grande */
+header .logo img {
+width: 300px;        /* tamaño mucho más grande */
 height: auto;
-background: transparent !important;   /* asegura que NO tenga fondo */
-position: absolute; /* esquina superior izquierda */
-top: 5px;
+background: transparent !important; /* asegura que no tenga fondo */
+display: block;
+position: absolute;
+top: 10px;
 left: 10px;
-z-index: 1000;
 cursor: pointer;
 transition: transform 0.2s ease-in-out;
 }
 
-.logo:hover {
+header .logo img:hover {
 transform: scale(1.05);
 }
 
@@ -96,4 +96,5 @@ transition: background-color 0.2s;
 button:hover {
 background-color: #e55b00;
 }
+
 
