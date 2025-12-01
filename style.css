@@ -92,16 +92,21 @@ max-width: 1200px;
 margin: 0 auto;
 }
 
-/* -------------------------------- */
-/* CENTRAR TODOS LOS TITULOS Y TEXTOS PRINCIPALES */
-/* -------------------------------- */
+/* ------------------------------- */
+/* CENTRAR TITULOS ESPECÍFICOS */
+/* ------------------------------- */
 
-section h2,
-section h3,
-section p {
-text-align: center;
-margin-left: auto;
-margin-right: auto;
+#sobre-nosotros h2,
+#servicios h2,
+#equipo h2 {
+  text-align: center;
+}
+
+/* Párrafo de sobre nosotros centrado visualmente y justificado */
+#sobre-nosotros p {
+  text-align: justify;
+  max-width: 900px;
+  margin: 20px auto;
 }
 
 /* Hero Section */
@@ -172,6 +177,7 @@ box-shadow: 0 0 20px rgba(63,255,207,0.5);
 .card h3, .ingeniero h3 {
 color: #3fffcf;
 margin-bottom: 15px;
+text-align: center;
 }
 
 /* Fotos del equipo */
