@@ -7,12 +7,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
-  }
+}
 
 /* Body */
 body {
-background-color: #121212;  /* fondo oscuro */
-color: #e0e0e0;             /* texto claro */
+background-color: #1a1a1a;  /* gris oscuro más claro */
+color: #e0e0e0;
 line-height: 1.6;
 scroll-behavior: smooth;
 }
@@ -20,13 +20,13 @@ scroll-behavior: smooth;
 /* Cabecera / Header */
 header {
 width: 100%;
-height: 100px; /* altura para logo grande */
+height: 100px;
 background-color: rgba(18,18,18,0.95);
 display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 0 40px;
-position: fixed; /* header fijo */
+position: fixed;
 top: 0;
 left: 0;
 z-index: 1000;
@@ -46,7 +46,7 @@ transition: transform 0.2s ease-in-out, filter 0.3s;
 
 header .logo img:hover {
 transform: scale(1.05);
-filter: drop-shadow(0 0 8px #3fffcf); /* verde menta suave */
+filter: drop-shadow(0 0 8px #3fffcf);
 }
 
 /* Navegación */
@@ -73,7 +73,7 @@ bottom: 0;
 left: 0;
 width: 0%;
 height: 2px;
-background: #3fffcf; /* verde menta */
+background: #3fffcf;
 transition: 0.3s;
 }
 
@@ -85,10 +85,12 @@ nav ul li a:hover {
 color: #3fffcf;
 }
 
-/* Secciones principales */
+/* Secciones principales – centrado profesional */
 section {
-padding: 120px 20px 80px 20px; /* deja espacio por el header fijo */
+padding: 120px 20px 80px 20px;
 border-bottom: 1px solid #222;
+max-width: 1200px;   /* centrado */
+margin: 0 auto;       /* centrado */
 }
 
 /* Hero Section */
@@ -101,6 +103,8 @@ justify-content: center;
 align-items: center;
 background: linear-gradient(135deg, #1f1f1f, #121212);
 border-bottom: 1px solid #222;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .hero h2 {
@@ -159,14 +163,14 @@ color: #3fffcf;
 margin-bottom: 15px;
 }
 
-/* Fotos del equipo de ingenieros (ajustadas para todos) */
+/* Fotos del equipo */
 .equipo .ingeniero img {
-width: 200px;        /* ancho reducido para que entren todas */
-height: 200px;       /* alto reducido */
-object-fit: cover;   /* recorta sin deformar */
-border-radius: 10px; /* bordes redondeados */
+width: 200px;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
 display: block;
-margin: 0 auto 15px; /* centra y separa del nombre */
+margin: 0 auto 15px;
 }
 
 /* Contacto */
@@ -183,7 +187,7 @@ padding: 40px 20px;
 border-top: 1px solid #222;
 }
 
-/* Botones generales */
+/* Botones */
 button {
 padding: 12px 24px;
 border: none;
@@ -198,4 +202,3 @@ button:hover {
 background-color: #32e6b0;
 box-shadow: 0 0 10px #3fffcf;
 }
-
