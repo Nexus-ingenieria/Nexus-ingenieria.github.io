@@ -220,18 +220,20 @@ footer .redes a:hover {
 /* Celulares */
 /* ==============================
    RESPONSIVE DESIGN (Celulares)
+/* ==============================
+   RESPONSIVE DESIGN (Celulares)
    ============================== */
 @media (max-width: 600px) {
 
   header {
       padding: 6px 10px;
-      flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+      flex-wrap: wrap;
   }
 
   .logo {
-      flex: 1 1 100%; /* Ocupa toda la fila */
-      text-align: center; /* Centrar logo */
-      margin-bottom: 5px; /* Separación del nav */
+      flex: 1 1 100%;
+      text-align: center;
+      margin-bottom: 5px;
   }
 
   .logo img {
@@ -239,12 +241,12 @@ footer .redes a:hover {
   }
 
   nav {
-      flex: 1 1 100%; /* Ocupa toda la fila debajo del logo */
+      flex: 1 1 100%;
       text-align: center;
   }
 
   nav ul {
-      flex-wrap: wrap; /* Los enlaces pueden ir a la siguiente línea */
+      flex-wrap: wrap;
       justify-content: center;
       gap: 6px;
       margin: 0 auto;
@@ -265,13 +267,14 @@ footer .redes a:hover {
   /* Servicios - colocar Planos debajo de Aplicaciones Móviles */
   .cards {
       display: grid;
-      grid-template-columns: 1fr; /* Una columna para móviles */
+      grid-template-columns: 1fr; /* Una columna */
       gap: 12px;
   }
 
-  .cards .card:nth-child(3) {
-      order: 3; /* Asegura que Planos Técnicos esté debajo de Aplicaciones Móviles */
-  }
+  .cards .card:nth-child(1) { order: 1; } /* Paginas Web */
+  .cards .card:nth-child(2) { order: 2; } /* Aplicaciones Moviles */
+  .cards .card:nth-child(3) { order: 3; } /* Planos Técnicos */
+  .cards .card:nth-child(4) { order: 4; } /* Desarrollo Tecnológico */
 
   .ingeniero img, .card img {
       width: 100%;
@@ -283,18 +286,19 @@ footer .redes a:hover {
       width: 90%;
   }
 
+  /* Sobre Nosotros */
   #sobre-nosotros {
-      padding: 60px 12px; /* Ajuste de padding */
-      text-align: justify; /* Justificar texto */
+      padding: 60px 20px; /* más espacio a los lados */
+      text-align: justify;
   }
 
   #sobre-nosotros p {
-      max-width: 100%; /* Ocupa todo el ancho de la pantalla */
-      margin: 0 auto;  /* Centrado horizontal */
+      max-width: 100%;
+      margin: 0 auto;
   }
 
   #contacto, #servicios {
-      padding: 60px 12px; /* Ajuste general */
+      padding: 60px 20px;
   }
 }
 
