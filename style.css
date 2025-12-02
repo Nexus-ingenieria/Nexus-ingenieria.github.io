@@ -223,14 +223,18 @@ color: #009977;
 @media (max-width: 600px) {
 
 header {
-    flex-direction: column;
-    padding: 15px;
-    text-align: center;
+    flex-direction: row;  /* Mantiene el header igual que en computadora */
+    justify-content: space-between;
+    padding: 8px 15px;   /* Más compacto */
 }
 
 nav ul {
-    flex-direction: column;
+    flex-direction: row;  /* Igual que en desktop */
     gap: 10px;
+}
+
+nav ul li a {
+    font-size: 14px;      /* Más pequeño sin perder visibilidad */
 }
 
 .hero h2 {
@@ -245,20 +249,26 @@ nav ul {
     grid-template-columns: 1fr !important;
 }
 
+.card {
+    height: auto;         /* Permite que el contenido determine altura */
+}
+
 .equipo {
     grid-template-columns: 1fr !important;
 }
 
 .ingeniero img {
-    height: 220px;
+    width: 100%;
+    height: auto;          /* Mantiene proporción sin cortar la foto */
+    object-fit: cover;     /* Solo se aplica si la imagen es más grande que el contenedor */
 }
 
 h3 {
     width: 90%;
     font-size: 26px;
 }
-
 }
+
 
 /* Tablets */
 @media (max-width: 900px) {
