@@ -1,244 +1,349 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+/* Reset básico */ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Arial', sans-serif; 
+} 
+
+/* Body */ 
+body { 
+    background-color: #1a1a1a; 
+    color: #e0e0e0; 
+    line-height: 1.6; 
+    scroll-behavior: smooth; 
+} 
+
+/* Header */ 
+header { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background-color: rgba(15, 15, 15, 0.9); 
+    padding: 8px 15px; /* más compacto */ 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    z-index: 1000; 
+    backdrop-filter: blur(5px); 
+    border-bottom: 1px solid #2a2a2a; 
+} 
+
+.logo img { 
+    height: 40px; /* más pequeño */ 
+    width: auto; 
+    filter: drop-shadow(0 0 3px #00ffcc); 
+} 
+
+/* Navegación */ 
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 10px; /* menos espacio entre enlaces */ 
+} 
+
+nav ul li a { 
+    text-decoration: none; 
+    color: #e0e0e0; 
+    font-weight: bold; 
+    font-size: 13px; /* más compacto */ 
+    transition: 0.3s; 
+} 
+
+nav ul li a:hover { 
+    color: #00ffcc; 
+} 
+
+/* Hero */ 
+.hero { 
+    padding: 160px 20px 120px; 
+    text-align: center; 
+    background: linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 100%); 
+    background-size: cover; 
+    position: relative; 
+} 
+
+.hero h2 { 
+    font-size: 40px; 
+    margin-bottom: 10px; 
+    text-shadow: 0 0 10px #00ffcc; 
+} 
+
+.hero p { 
+    max-width: 700px; 
+    margin: auto; 
+    margin-bottom: 20px; 
+} 
+
+.btn { 
+    display: inline-block; 
+    padding: 12px 25px; 
+    background-color: #00ffcc; 
+    color: #000; 
+    font-size: 18px; 
+    font-weight: bold; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    transition: 0.3s; 
+} 
+
+.btn:hover { 
+    background-color: #00cca3; 
+} 
+
+/* Servicios */ 
+#servicios { 
+    padding: 100px 20px; 
+    text-align: center; 
+} 
+
+#servicios h2 { 
+    font-size: 34px; 
+    margin-bottom: 50px; 
+    text-align: center; 
+} 
+
+.cards { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* más compacto y responsive */ 
+    gap: 15px; 
+    margin-top: 20px; 
+} 
+
+.card { 
+    background-color: #222; 
+    padding: 20px; 
+    border-radius: 12px; 
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.1); 
+    transition: 0.3s; 
+} 
+
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3); 
+} 
+
+/* Sobre Nosotros */ 
+#sobre-nosotros { 
+    padding: 80px 20px; 
+    text-align: center; 
+} 
+
+#sobre-nosotros h2 { 
+    font-size: 34px; 
+    margin-bottom: 30px; 
+    text-align: center; 
+} 
+
+#sobre-nosotros p { 
+    max-width: 900px; 
+    margin: auto; 
+    text-align: justify; 
+} 
+
+/* SECCIÓN EQUIPO */ 
+h3 { 
+    text-align: center !important; 
+    font-size: 32px; 
+    margin-top: 90px; 
+    margin-bottom: 40px; 
+    border-bottom: 1px solid #00ffcc; 
+    padding-bottom: 12px; 
+    width: 70%; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
-/* Body */
-body {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #111;
-  padding: 12px 0;
-  z-index: 1000;
-  border-bottom: 1px solid #333;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-}
-
-nav .logo {
-  width: 70px;
-  height: auto;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-nav ul li a {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: #00ffaa;
-}
-
-/* Sección Hero */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px;
-  background: #1a1a1a;
-}
-
-.hero h1 {
-  font-size: 48px;
-  color: #00ffaa;
-}
-
-.hero p {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-/* Sección Sobre Nosotros */
-.about {
-  padding: 120px 10%;
-  background-color: #1c1c1c;
-}
-
-.about h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #00ffaa;
-}
-
-.about p {
-  font-size: 18px;
-  max-width: 900px;
-}
-
-/* Sección Servicios */
-.servicios {
-  padding: 120px 10%;
-  background-color: #1a1a1a;
-  text-align: center;
-}
-
-.servicios h2 {
-  font-size: 32px;
-  color: #00ffaa;
-  margin-bottom: 20px;
-}
-
-.servicio-box {
-  background-color: #222;
-  padding: 25px;
-  margin: 25px auto;
-  width: 80%;
-  border-radius: 12px;
-  border: 1px solid #00ffaa;
-  transition: 0.3s;
-}
-
-.servicio-box:hover {
-  transform: scale(1.03);
-}
-
-/* Sección Equipo */
-.equipo {
-  padding: 120px 10%;
-  background-color: #1c1c1c;
-}
-
-.equipo h2 {
-  font-size: 32px;
-  color: #00ffaa;
-  margin-bottom: 10px;
-}
-
-/* Título con la LÍNEA ANIMADA */
+/* 🔥 ANIMACIÓN AGREGADA (ÚNICA MODIFICACIÓN) */
 h3.equipo-title {
-  font-size: 26px;
-  margin-bottom: 30px;
-  color: #00ffaa;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Línea animada */
 h3.equipo-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -100%;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #00ffcc, transparent);
-  animation: slideLine 3s linear infinite;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+    animation: slideLine 3s linear infinite;
 }
 
-/* Animación */
 @keyframes slideLine {
-  0% { left: -100%; }
-  50% { left: 0%; }
-  100% { left: 100%; }
+    0% { left: -100%; }
+    50% { left: 0%; }
+    100% { left: 100%; }
 }
 
-/* Tarjetas del equipo */
-.equipo-cards {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+.equipo { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px; 
+    padding: 20px; 
+    margin-top: 30px; 
+} 
 
-.equipo-card {
-  background-color: #222;
-  padding: 25px;
-  width: 280px;
-  text-align: center;
-  border-radius: 12px;
-  border: 1px solid #00ffaa;
-}
+.ingeniero { 
+    background-color: #222; 
+    padding: 20px; 
+    border-radius: 12px; 
+    text-align: center; 
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.15); 
+    transition: 0.3s; 
+} 
 
-/* Contacto */
-.contacto {
-  padding: 120px 10%;
-  background-color: #1a1a1a;
-  text-align: center;
-}
+.ingeniero img { 
+    width: 100%; 
+    height: 260px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+} 
 
-.contacto h2 {
-  font-size: 32px;
-  color: #00ffaa;
-  margin-bottom: 20px;
-}
+.ingeniero:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4); 
+} 
 
-/* Íconos sociales */
-.social-links {
-  margin-top: 15px;
-}
+/* Contacto */ 
+#contacto { 
+    padding: 80px 20px; 
+    text-align: center; 
+} 
 
-.social-links a {
-  color: #00ffaa;
-  margin: 0 10px;
-  font-size: 22px;
-  text-decoration: none;
-  transition: 0.3s;
-}
+#contacto h2 { 
+    font-size: 34px; 
+    margin-bottom: 20px; 
+} 
 
-.social-links a:hover {
-  color: #fff;
-}
+/* Footer */ 
+footer { 
+    text-align: center; 
+    padding: 20px; 
+    background-color: #0f0f0f; 
+    margin-top: 50px; 
+} 
 
-/* Botón WhatsApp */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 32px;
-  color: white;
-  text-decoration: none;
-  z-index: 999;
-  transition: 0.3s;
-}
+footer .redes a { 
+    color: #00ffcc; 
+    text-decoration: none; 
+    margin: 0 10px; 
+    transition: 0.3s; 
+} 
 
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-  background-color: #1ebe57;
-}
+footer .redes a:hover { 
+    color: #009977; 
+} 
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 25px;
-  background-color: #111;
-  border-top: 1px solid #333;
-  margin-top: 50px;
-}
+/* ============================== RESPONSIVE DESIGN (Compacto) ============================== */ 
 
+/* Celulares */ 
+@media (max-width: 600px) { 
+    header { 
+        padding: 6px 10px; 
+        flex-wrap: wrap; 
+    } 
+
+    .logo { 
+        flex: 1 1 100%; 
+        text-align: center; 
+        margin-bottom: 5px; 
+    } 
+
+    .logo img { 
+        height: 35px; 
+    } 
+
+    nav { 
+        flex: 1 1 100%; 
+        text-align: center; 
+    } 
+
+    nav ul { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 6px; 
+        margin: 0 auto; 
+    } 
+
+    nav ul li a { 
+        font-size: 12px; 
+    } 
+
+    .hero h2 { 
+        font-size: 28px; 
+    } 
+
+    .hero p { 
+        font-size: 16px; 
+    } 
+
+    /* Servicios - colocar Planos debajo de Aplicaciones Móviles */ 
+    .cards { 
+        display: grid; 
+        grid-template-columns: 1fr; /* Una columna */ 
+        gap: 12px; 
+    } 
+
+    .cards .card:nth-child(1) { order: 1; } 
+    .cards .card:nth-child(2) { order: 2; } 
+    .cards .card:nth-child(3) { order: 3; } 
+    .cards .card:nth-child(4) { order: 4; } 
+
+    .ingeniero img, 
+    .card img { 
+        width: 100%; 
+        height: auto; 
+    } 
+
+    h3 { 
+        font-size: 26px; 
+        width: 90%; 
+    } 
+
+    /* Sobre Nosotros */ 
+    #sobre-nosotros { 
+        padding: 60px 20px; 
+        text-align: justify; 
+    } 
+
+    #sobre-nosotros p { 
+        max-width: 100%; 
+        margin: 0 auto; 
+    } 
+
+    #contacto, 
+    #servicios { 
+        padding: 60px 20px; 
+    } 
+} 
+
+/* Tablets */ 
+@media (max-width: 900px) { 
+    .cards, .equipo { 
+        grid-template-columns: repeat(2, 1fr); /* 2 por fila */ 
+    } 
+} 
+
+/* Laptops pequeñas */ 
+@media (max-width: 1200px) { 
+    .cards { 
+        grid-template-columns: repeat(3, 1fr); 
+    } 
+} 
+
+/* Tablets (duplicado original tuyo, sin tocar) */ 
+@media (max-width: 900px) { 
+    .cards, .equipo { 
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+} 
+
+/* Laptops pequeñas (duplicado original tuyo) */ 
+@media (max-width: 1200px) { 
+    .cards { 
+        grid-template-columns: repeat(3, 1fr); 
+    } 
+}
