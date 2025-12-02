@@ -217,24 +217,38 @@ footer .redes a:hover {
 /* ==============================
    RESPONSIVE DESIGN (Compacto)
    ============================== */
-
 /* Celulares */
 @media (max-width: 600px) {
 
   header {
-      padding: 6px 10px;   /* aún más compacto */
+      padding: 6px 10px;
+      flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+  }
+
+  .logo {
+      flex: 1 1 100%; /* Ocupa toda la fila */
+      text-align: center; /* Centrar logo */
+      margin-bottom: 5px; /* Separación del nav */
   }
 
   .logo img {
-      height: 35px;        /* más pequeño */
+      height: 35px;
+  }
+
+  nav {
+      flex: 1 1 100%; /* Ocupa toda la fila debajo del logo */
+      text-align: center;
   }
 
   nav ul {
-      gap: 6px;            /* menos espacio entre enlaces */
+      flex-wrap: wrap; /* Los enlaces pueden ir a la siguiente línea */
+      justify-content: center;
+      gap: 6px;
+      margin: 0 auto;
   }
 
   nav ul li a {
-      font-size: 12px;     /* más compacto */
+      font-size: 12px;
   }
 
   .hero h2 {
@@ -246,11 +260,13 @@ footer .redes a:hover {
   }
 
   .cards, .equipo {
-      grid-template-columns: 1fr;  /* una columna para móviles */
+      grid-template-columns: 1fr;  /* Una columna para móviles */
+      gap: 12px; /* Espaciado compacto */
   }
 
-  .ingeniero img {
-      height: auto; /* Mantener proporción */
+  .ingeniero img, .card img {
+      width: 100%;
+      height: auto;
   }
 
   h3 {
@@ -258,8 +274,22 @@ footer .redes a:hover {
       width: 90%;
   }
 
-  #sobre-nosotros, #contacto {
-      padding: 60px 12px; /* menos padding */
+  #sobre-nosotros, #contacto, #servicios {
+      padding: 60px 12px; /* Ajuste general */
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .cards, .equipo {
+      grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+  }
+}
+
+/* Laptops pequeñas */
+@media (max-width: 1200px) {
+  .cards {
+      grid-template-columns: repeat(3, 1fr);
   }
 }
 
