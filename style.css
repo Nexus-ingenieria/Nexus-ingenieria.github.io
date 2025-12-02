@@ -276,15 +276,14 @@ footer .redes a:hover {
     } 
 
     /* 🔥 TARJETAS SERVICIOS 2×2 EN CELULAR */
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
+    #servicios .cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila */
         gap: 12px;
     }
 
-    .cards .card:nth-child(1) { order: 1; }
-    .cards .card:nth-child(3) { order: 2; }
-    .cards .card:nth-child(2) { order: 3; }
-    .cards .card:nth-child(4) { order: 4; }
+    #servicios .cards .card {
+        width: 100%; /* cada tarjeta ocupa toda su columna */
+    }
 
     .ingeniero img { 
         width: 100%; 
