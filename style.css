@@ -218,6 +218,9 @@ footer .redes a:hover {
    RESPONSIVE DESIGN (Compacto)
    ============================== */
 /* Celulares */
+/* ==============================
+   RESPONSIVE DESIGN (Celulares)
+   ============================== */
 @media (max-width: 600px) {
 
   header {
@@ -259,9 +262,15 @@ footer .redes a:hover {
       font-size: 16px;
   }
 
-  .cards, .equipo {
-      grid-template-columns: 1fr;  /* Una columna para móviles */
-      gap: 12px; /* Espaciado compacto */
+  /* Servicios - colocar Planos debajo de Aplicaciones Móviles */
+  .cards {
+      display: grid;
+      grid-template-columns: 1fr; /* Una columna para móviles */
+      gap: 12px;
+  }
+
+  .cards .card:nth-child(3) {
+      order: 3; /* Asegura que Planos Técnicos esté debajo de Aplicaciones Móviles */
   }
 
   .ingeniero img, .card img {
@@ -274,10 +283,21 @@ footer .redes a:hover {
       width: 90%;
   }
 
-  #sobre-nosotros, #contacto, #servicios {
+  #sobre-nosotros {
+      padding: 60px 12px; /* Ajuste de padding */
+      text-align: justify; /* Justificar texto */
+  }
+
+  #sobre-nosotros p {
+      max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+      margin: 0 auto;  /* Centrado horizontal */
+  }
+
+  #contacto, #servicios {
       padding: 60px 12px; /* Ajuste general */
   }
 }
+
 
 /* Tablets */
 @media (max-width: 900px) {
