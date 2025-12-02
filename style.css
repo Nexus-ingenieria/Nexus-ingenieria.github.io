@@ -101,7 +101,7 @@ text-align: center;
 #servicios h2 {
 font-size: 34px;
 margin-bottom: 50px;
-text-align: center; /* centrado */
+text-align: center;
 }
 
 .cards {
@@ -142,12 +142,12 @@ margin: auto;
 text-align: justify;
 }
 
-/* ─────────── SECCIÓN EQUIPO ─────────── */
+/* SECCIÓN EQUIPO */
 h3 {
-text-align: center !important;             /* TÍTULO CENTRADO */
+text-align: center !important;
 font-size: 32px;
-margin-top: 90px;                          /* MÁS SEPARADO DEL CONTENIDO DE ARRIBA */
-margin-bottom: 40px;                       /* MÁS ESPACIO ANTES DE LAS FOTOS */
+margin-top: 90px;
+margin-bottom: 40px;
 border-bottom: 1px solid #00ffcc;
 padding-bottom: 12px;
 width: 70%;
@@ -160,7 +160,7 @@ display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 gap: 25px;
 padding: 20px;
-margin-top: 30px;                           /* SEPARA MÁS LA LÍNEA Y LAS TARJETAS */
+margin-top: 30px;
 }
 
 .ingeniero {
@@ -215,4 +215,64 @@ footer .redes a:hover {
 color: #009977;
 }
 
+/* =====================================
+   RESPONSIVE DESIGN (NO ROMPE NADA)
+   ===================================== */
 
+/* Celulares */
+@media (max-width: 600px) {
+
+header {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero h2 {
+    font-size: 28px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.cards {
+    grid-template-columns: 1fr !important;
+}
+
+.equipo {
+    grid-template-columns: 1fr !important;
+}
+
+.ingeniero img {
+    height: 220px;
+}
+
+h3 {
+    width: 90%;
+    font-size: 26px;
+}
+
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+.cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+.equipo {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+/* Laptops pequeñas */
+@media (max-width: 1200px) {
+.cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
