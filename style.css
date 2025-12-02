@@ -20,7 +20,7 @@ header {
     top: 0; 
     width: 100%; 
     background-color: rgba(15, 15, 15, 0.9); 
-    padding: 8px 15px; /* más compacto */ 
+    padding: 8px 15px; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -30,7 +30,7 @@ header {
 } 
 
 .logo img { 
-    height: 40px; /* más pequeño */ 
+    height: 40px; 
     width: auto; 
     filter: drop-shadow(0 0 3px #00ffcc); 
 } 
@@ -39,14 +39,14 @@ header {
 nav ul { 
     list-style: none; 
     display: flex; 
-    gap: 10px; /* menos espacio entre enlaces */ 
+    gap: 10px; 
 } 
 
 nav ul li a { 
     text-decoration: none; 
     color: #e0e0e0; 
     font-weight: bold; 
-    font-size: 13px; /* más compacto */ 
+    font-size: 13px; 
     transition: 0.3s; 
 } 
 
@@ -59,8 +59,6 @@ nav ul li a:hover {
     padding: 160px 20px 120px; 
     text-align: center; 
     background: linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 100%); 
-    background-size: cover; 
-    position: relative; 
 } 
 
 .hero h2 { 
@@ -105,7 +103,7 @@ nav ul li a:hover {
 
 .cards { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* más compacto y responsive */ 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
     gap: 15px; 
     margin-top: 20px; 
 } 
@@ -132,7 +130,6 @@ nav ul li a:hover {
 #sobre-nosotros h2 { 
     font-size: 34px; 
     margin-bottom: 30px; 
-    text-align: center; 
 } 
 
 #sobre-nosotros p { 
@@ -154,7 +151,6 @@ h3 {
     margin-right: auto; 
 }
 
-/* 🔥 ANIMACIÓN AGREGADA (ÚNICA MODIFICACIÓN) */
 h3.equipo-title {
     position: relative;
     overflow: hidden;
@@ -237,9 +233,8 @@ footer .redes a:hover {
     color: #009977; 
 } 
 
-/* ============================== RESPONSIVE DESIGN (Compacto) ============================== */ 
+/* ============================== RESPONSIVE DESIGN ============================== */ 
 
-/* Celulares */ 
 @media (max-width: 600px) { 
     header { 
         padding: 6px 10px; 
@@ -280,20 +275,18 @@ footer .redes a:hover {
         font-size: 16px; 
     } 
 
-    /* Servicios - colocar Planos debajo de Aplicaciones Móviles */ 
-    .cards { 
-        display: grid; 
-        grid-template-columns: 1fr; /* Una columna */ 
-        gap: 12px; 
-    } 
+    /* 🔥 ORGANIZACIÓN EXACTA 2×2 COMO PEDISTE */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
 
-    .cards .card:nth-child(1) { order: 1; } 
-    .cards .card:nth-child(2) { order: 2; } 
-    .cards .card:nth-child(3) { order: 3; } 
-    .cards .card:nth-child(4) { order: 4; } 
+    .cards .card:nth-child(1) { order: 1; } /* Páginas Web */
+    .cards .card:nth-child(3) { order: 2; } /* Planos Técnicos debajo */
+    .cards .card:nth-child(2) { order: 3; } /* Apps móviles */
+    .cards .card:nth-child(4) { order: 4; } /* Desarrollo */
 
-    .ingeniero img, 
-    .card img { 
+    .ingeniero img { 
         width: 100%; 
         height: auto; 
     } 
@@ -303,7 +296,6 @@ footer .redes a:hover {
         width: 90%; 
     } 
 
-    /* Sobre Nosotros */ 
     #sobre-nosotros { 
         padding: 60px 20px; 
         text-align: justify; 
@@ -318,30 +310,14 @@ footer .redes a:hover {
     #servicios { 
         padding: 60px 20px; 
     } 
-} 
+}
 
-/* Tablets */ 
-@media (max-width: 900px) { 
-    .cards, .equipo { 
-        grid-template-columns: repeat(2, 1fr); /* 2 por fila */ 
-    } 
-} 
-
-/* Laptops pequeñas */ 
-@media (max-width: 1200px) { 
-    .cards { 
-        grid-template-columns: repeat(3, 1fr); 
-    } 
-} 
-
-/* Tablets (duplicado original tuyo, sin tocar) */ 
 @media (max-width: 900px) { 
     .cards, .equipo { 
         grid-template-columns: repeat(2, 1fr); 
     } 
 } 
 
-/* Laptops pequeñas (duplicado original tuyo) */ 
 @media (max-width: 1200px) { 
     .cards { 
         grid-template-columns: repeat(3, 1fr); 
