@@ -1,49 +1,278 @@
-/* --- Nav: hamburguesa solo en móviles --- */
-.hamburger {
-    display: none; /* Oculto en escritorio */
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #00ffcc;
-    border-radius: 3px;
-    transition: 0.3s;
+/* Body */
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* Menú oculto por defecto en móviles */
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(15, 15, 15, 0.9);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.logo img {
+  height: 50px; /* un poquito más compacto */
+  width: auto;
+  filter: drop-shadow(0 0 3px #00ffcc);
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* un poco menos de espacio */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: bold;
+  font-size: 14px; /* un poco más compacto */
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00ffcc;
+}
+
+/* Hero */
+.hero {
+  padding: 160px 20px 120px;
+  text-align: center;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 100%);
+  background-size: cover;
+  position: relative;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #00ffcc;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #00cca3;
+}
+
+/* Servicios */
+#servicios {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#servicios h2 {
+  font-size: 34px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+/* Sobre Nosotros */
+#sobre-nosotros {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#sobre-nosotros h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#sobre-nosotros p {
+  max-width: 900px;
+  margin: auto;
+  text-align: justify;
+}
+
+/* SECCIÓN EQUIPO */
+h3 {
+  text-align: center !important;
+  font-size: 32px;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #00ffcc;
+  padding-bottom: 12px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.ingeniero {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.15);
+  transition: 0.3s;
+}
+
+.ingeniero img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.ingeniero:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+/* Contacto */
+#contacto {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f0f0f;
+  margin-top: 50px;
+}
+
+footer .redes a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+footer .redes a:hover {
+  color: #009977;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN (Compacto)
+   ============================== */
+
+/* Celulares */
+@media (max-width: 600px) {
+
+header {
+    padding: 8px 12px;   /* más compacto */
+}
+
+.logo img {
+    height: 45px;        /* más pequeño */
+}
+
+nav ul {
+    gap: 8px;            /* menos espacio entre enlaces */
+}
+
+nav ul li a {
+    font-size: 13px;     /* más compacto */
+}
+
+.hero h2 {
+    font-size: 28px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.cards, .equipo {
+    grid-template-columns: 1fr;  /* Una columna para móviles */
+}
+
+.ingeniero img {
+    height: auto; /* Mantener proporción */
+}
+
+h3 {
+    font-size: 26px;
+    width: 90%;
+}
+
+#sobre-nosotros, #contacto {
+    padding: 60px 12px; /* menos padding */
+}
+}
+
+/* Tablets */
 @media (max-width: 900px) {
-    nav ul {
-        display: none;       /* Oculto por defecto */
-        flex-direction: column;
-        gap: 15px;
-        background-color: #1a1a1a;
-        position: absolute;
-        top: 70px;           /* Debajo del header */
-        right: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        width: 180px;
-        z-index: 999;
-    }
+.cards, .equipo {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
 
-    nav ul.show {
-        display: flex;       /* Mostrar al hacer clic en hamburguesa */
-    }
-
-    .hamburger {
-        display: flex;       /* Solo visible en móviles */
-    }
-
-    /* Ajustes de header para móviles */
-    header {
-        padding: 8px 15px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
+/* Laptops pequeñas */
+@media (max-width: 1200px) {
+.cards {
+    grid-template-columns: repeat(3, 1fr);
+}
 }
