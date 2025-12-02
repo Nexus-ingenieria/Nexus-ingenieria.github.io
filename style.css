@@ -20,7 +20,7 @@ header {
   top: 0;
   width: 100%;
   background-color: rgba(15, 15, 15, 0.9);
-  padding: 10px 20px;
+  padding: 8px 15px; /* más compacto */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,7 @@ header {
 }
 
 .logo img {
-  height: 50px; /* un poquito más compacto */
+  height: 40px; /* más pequeño */
   width: auto;
   filter: drop-shadow(0 0 3px #00ffcc);
 }
@@ -39,14 +39,14 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 15px; /* un poco menos de espacio */
+  gap: 10px; /* menos espacio entre enlaces */
 }
 
 nav ul li a {
   text-decoration: none;
   color: #e0e0e0;
   font-weight: bold;
-  font-size: 14px; /* un poco más compacto */
+  font-size: 13px; /* más compacto */
   transition: 0.3s;
 }
 
@@ -105,8 +105,8 @@ nav ul li a:hover {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* más compacto y responsive */
+  gap: 15px;
   margin-top: 20px;
 }
 
@@ -221,58 +221,58 @@ footer .redes a:hover {
 /* Celulares */
 @media (max-width: 600px) {
 
-header {
-    padding: 8px 12px;   /* más compacto */
-}
+  header {
+      padding: 6px 10px;   /* aún más compacto */
+  }
 
-.logo img {
-    height: 45px;        /* más pequeño */
-}
+  .logo img {
+      height: 35px;        /* más pequeño */
+  }
 
-nav ul {
-    gap: 8px;            /* menos espacio entre enlaces */
-}
+  nav ul {
+      gap: 6px;            /* menos espacio entre enlaces */
+  }
 
-nav ul li a {
-    font-size: 13px;     /* más compacto */
-}
+  nav ul li a {
+      font-size: 12px;     /* más compacto */
+  }
 
-.hero h2 {
-    font-size: 28px;
-}
+  .hero h2 {
+      font-size: 28px;
+  }
 
-.hero p {
-    font-size: 16px;
-}
+  .hero p {
+      font-size: 16px;
+  }
 
-.cards, .equipo {
-    grid-template-columns: 1fr;  /* Una columna para móviles */
-}
+  .cards, .equipo {
+      grid-template-columns: 1fr;  /* una columna para móviles */
+  }
 
-.ingeniero img {
-    height: auto; /* Mantener proporción */
-}
+  .ingeniero img {
+      height: auto; /* Mantener proporción */
+  }
 
-h3 {
-    font-size: 26px;
-    width: 90%;
-}
+  h3 {
+      font-size: 26px;
+      width: 90%;
+  }
 
-#sobre-nosotros, #contacto {
-    padding: 60px 12px; /* menos padding */
-}
+  #sobre-nosotros, #contacto {
+      padding: 60px 12px; /* menos padding */
+  }
 }
 
 /* Tablets */
 @media (max-width: 900px) {
-.cards, .equipo {
-    grid-template-columns: repeat(2, 1fr);
-}
+  .cards, .equipo {
+      grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablets */
+  }
 }
 
 /* Laptops pequeñas */
 @media (max-width: 1200px) {
-.cards {
-    grid-template-columns: repeat(3, 1fr);
-}
+  .cards {
+      grid-template-columns: repeat(3, 1fr);
+  }
 }
