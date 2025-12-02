@@ -275,16 +275,16 @@ footer .redes a:hover {
         font-size: 16px; 
     } 
 
-    /* 🔥 ORGANIZACIÓN EXACTA 2×2 COMO PEDISTE */
+    /* 🔥 TARJETAS SERVICIOS 2×2 EN CELULAR */
     .cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
 
-    .cards .card:nth-child(1) { order: 1; } /* Páginas Web */
-    .cards .card:nth-child(3) { order: 2; } /* Planos Técnicos debajo */
-    .cards .card:nth-child(2) { order: 3; } /* Apps móviles */
-    .cards .card:nth-child(4) { order: 4; } /* Desarrollo */
+    .cards .card:nth-child(1) { order: 1; }
+    .cards .card:nth-child(3) { order: 2; }
+    .cards .card:nth-child(2) { order: 3; }
+    .cards .card:nth-child(4) { order: 4; }
 
     .ingeniero img { 
         width: 100%; 
@@ -323,3 +323,4 @@ footer .redes a:hover {
         grid-template-columns: repeat(3, 1fr); 
     } 
 }
+
